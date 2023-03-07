@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let horasTrabajadas= prompt(`Indica horas trabajadas : `);
+        let tarifa = prompt(`Indica tarifa : `);
+        let horaExtra = tarifa * 0.50
+        let sueldo;
+
+        function calcularSalario(horasTrabajadas, tarifa){
+            if(horasTrabajadas > 40 ){
+               sueldo = (horasTrabajadas * tarifa) + horaExtra
+               document.write("El salario es: "+ sueldo );
+            }else{
+                sueldo = horasTrabajadas * tarifa
+                document.write("El salario es: "+ sueldo + "por aumento en horas extras");
+            }
+        }
+        
+        calcularSalario(horasTrabajadas,tarifa)
+        
+
+        
+    </script>
+</body>
+</html>

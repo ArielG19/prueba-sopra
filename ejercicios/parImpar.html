@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //solicitar numero
+        let leerNumero = prompt(`Indica hasta que número quieres ver : `);
+        const par = [];
+        const impar = [];
+
+      function esPar(numero){
+        for(let i = 0; i <= numero; i++){
+
+            if(i % 2 === 0 ){
+                par.push(i);
+                par.sort((a, b) => {
+                if(a == b) {
+                    return 0; 
+                }
+                if(a > b) {
+                    return -1;
+                }
+                return 1;
+                });
+            }else{
+                impar.push(i);
+            }
+        }
+      }
+      esPar(leerNumero);
+      document.writeln("Son pares: " + par +"<br><br>"+ "Son impares: "+impar);
+
+        
+    </script>
+</body>
+</html>

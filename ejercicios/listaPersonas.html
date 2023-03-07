@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      const persona = [
+        {nombre:"John",sexo:"M",edad:20},
+        {nombre:"Jose",sexo:"M",edad:40},
+        {nombre:"Mar",sexo:"F",edad:45},
+        {nombre:"Jonatan",sexo:"M",edad:50},
+        {nombre:"Juli",sexo:"F",edad:30},
+        {nombre:"Maria",sexo:"F",edad:25},
+        {nombre:"Javier",sexo:"M",edad:22},
+        {nombre:"Maria Jose",sexo:"F",edad:20},
+        {nombre:"Manuel",sexo:"M",edad:27},
+        {nombre:"Juliana",sexo:"F",edad:15},
+        {nombre:"Ana",sexo:"F",edad:15},
+        {nombre:"Pedro",sexo:"M",edad:5},
+        {nombre:"Amaia",sexo:"F",edad:17},
+        {nombre:"Irune",sexo:"F",edad:55},
+        {nombre:"Iker",sexo:"M",edad:5},
+        {nombre:"Esteban",sexo:"M",edad:18},
+        {nombre:"Jose Andres",sexo:"M",edad:42},
+        {nombre:"Ane",sexo:"F",edad:25},
+        ];
+        //total de personas
+        let personasTotales = persona.length;
+        document.writeln("Total de personas: ", personasTotales + "<br>")
+        //mayores de edad
+        let mayorDeEdad = persona.filter(persona => persona.edad >= 18 );
+        document.writeln("Total mayor a 18: ",mayorDeEdad.length + "<br>");
+        //menores de edad
+        let menorDeEdad = persona.filter(persona => persona.edad <= 18 );
+        document.writeln("Total menor a 18: ",menorDeEdad.length + "<br>");
+        //hombres mayores de edad
+        let mMayorDeEdad = persona.filter(persona => persona.edad >= 18 && persona.sexo === "M" );
+        document.writeln("Total personas masculinas mayores a 18: ",mMayorDeEdad.length + "<br>");
+        //mujeres menores de edad
+        let fMenorDeEdad = persona.filter(persona => persona.edad <= 18 && persona.sexo === "F" );
+        document.writeln("Total personas femeninas menores a 18: ",fMenorDeEdad.length + "<br><br>");
+
+
+        //porcentaje de personas mayores
+        const porcentajeMayores = (100 * mayorDeEdad.length) / personasTotales;
+        document.writeln("El porcentaje de personas mayores equivale a un: " + porcentajeMayores +"%" + "<br>");
+
+        //porcentaje de mujeres
+        let mujeres = persona.filter(persona =>  persona.sexo === "F" );
+        const porcentajeMujeres = (100 * mujeres.length) / personasTotales;
+        document.writeln("El porcentaje de personas mujeres equivale a un: " + porcentajeMujeres +"%");
+
+    </script>
+</body>
+</html>
